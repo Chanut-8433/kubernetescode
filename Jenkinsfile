@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("chanut8433/test-2")
+       app = docker.build("chanut8433/test")
     }
 
     stage('Test image') {
@@ -21,7 +21,7 @@ node {
     }
 
     stage('Push image') {
-        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-chanut') {
+        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-chanut8433') {
             app.push("${env.BUILD_NUMBER}")
         }
     }
