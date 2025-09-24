@@ -18,7 +18,7 @@ node {
     }
 
     stage('Push image') {
-        docker.withRegistry('https://index.docker.io/v1/', 'dockerhub chanut8433') {
+        docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
             // push build number tag
             app.push("${tag}")
             // push latest tag
