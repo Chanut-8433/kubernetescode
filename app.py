@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Route หลัก
 @app.route('/')
 def home():
-    return 'Linuxgray Training Center - 5'
+    return 'Linuxgray Training Center'
 
 # Route สำหรับ health check (ใช้กับ Docker/K8s ได้ดี)
 @app.route('/health')
